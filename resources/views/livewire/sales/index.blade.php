@@ -247,7 +247,7 @@
         </x-slot>
     </x-modal>
 
-    @livewire('sales.payment.index', ['sale' => $sale])
+    {{-- @livewire('sales.payment.index', ['sale' => $sale]) --}}
 
 
     @pushOnce('scripts')

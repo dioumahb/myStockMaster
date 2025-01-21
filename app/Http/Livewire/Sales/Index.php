@@ -200,7 +200,7 @@ class Index extends Component
         }
 
         // Add the country code to the beginning of the phone number.
-        $phone = '+212'.$phone;
+        $phone = '+224'.$phone;
 
         $greeting = __('Hello');
 

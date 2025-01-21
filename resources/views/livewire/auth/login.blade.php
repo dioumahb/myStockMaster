@@ -53,9 +53,9 @@
                     {{ __('Forgot your password?') }}
                 </a>
             @endif
-            <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('register') }}">
+            {{-- <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('register') }}">
                 {{ __('Register') }}
-            </a>
+            </a> --}}
         </div>
 
         <div class="flex items-center justify-between mt-4">

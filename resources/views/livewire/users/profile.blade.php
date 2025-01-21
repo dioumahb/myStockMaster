@@ -34,10 +34,10 @@
                         <select
                             class="block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md mt-1"
                             name="is_active" id="is_active" wire:model="is_active" required>
-                            <option value="1" {{ $user->is_active == 1 ? 'selected' : '' }}>
+                            <option value="1" {{ $user->status == 1 ? 'selected' : '' }}>
                                 {{ __('Active') }}
                             </option>
-                            <option value="2" {{ $user->is_active == 2 ? 'selected' : '' }}>
+                            <option value="2" {{ $user->status == 2 ? 'selected' : '' }}>
                                 {{ __('Deactive') }}</option>
                         </select>
                     </div>

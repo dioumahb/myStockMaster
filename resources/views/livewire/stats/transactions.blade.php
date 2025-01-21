@@ -261,19 +261,19 @@
                 let tes = data;
                 let options = {
                     series: [{
-                            name: "Sales Total Amount",
+                            name: "Montant total des ventes",
                             data: tes.total.sales
                         },
                         {
-                            name: "Sales Due Amount",
+                            name: "Montant dû des ventes",
                             data: tes.due_amount.sales
                         },
                         {
-                            name: "Purchase Total Amount",
+                            name: "Montant total de l'achat",
                             data: tes.total.purchase
                         },
                         {
-                            name: "Purchase Due Amount",
+                            name: "Montant dû à régler pour l'achat",
                             data: tes.due_amount.purchase
                         }
                     ],
@@ -330,13 +330,13 @@
                     },
                     yaxis: {
                         title: {
-                            text: "Amount",
+                            text: "Montant",
                         },
                     },
                     tooltip: {
                         y: {
                             formatter: function(val) {
-                                return "$" + val;
+                                return val + " GNF";
                             },
                         },
                     },

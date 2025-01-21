@@ -158,12 +158,14 @@ class ProfitLossReport extends Component
         return $revenue - $productCosts;
     }
 
-    private function getProductCost($productId, $warehouseId): float
+    private function getProductCost($productId, $warehouseId)
     {
         // Retrieve the product cost from the ProductWarehouse pivot table
         $productWarehouse = ProductWarehouse::where('product_id', $productId)
             ->where('warehouse_id', $warehouseId)
             ->first();
+
+           // dd($productWarehouse->cost);
 
         return $productWarehouse ? $productWarehouse->cost : 0;
     }

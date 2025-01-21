@@ -73,12 +73,17 @@ class Index extends Component
         return view('livewire.sales.payment.index', compact('salepayments'));
     }
 
+
+
     public function showPayments($sale_id)
     {
-        abort_if(Gate::denies('sale_access'), 403);
-
-        $this->sale = Sale::findOrFail($sale_id);
-
-        $this->showPayments = true;
+    abort_if(Gate::denies('sale_access'), 403);
+        try {
+            $this->sale = Sale::findOrFail($sale_id);
+            $this->showPayments = true;
+        } catch (ModelNotFoundException $e) {
+            // Handle exception, e.g., show an alert
+            $this->alert('error', 'Sale not found.');
+        }
     }
 }
